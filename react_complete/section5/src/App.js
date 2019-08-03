@@ -32,7 +32,7 @@ class App extends Component {
 
     // Make a copy of the people array...
     const peopleUpdated = [...this.state.people];
-    // ... and update the person on given index with the updated person
+    // ... and update the people array on given index with the updated person
     peopleUpdated[personIndex] = personUpdated;
 
     // Finally update the state with the updated array, which has an updated person
@@ -42,12 +42,11 @@ class App extends Component {
   deletePersonHandler = (personIndex) => {
     const people = [...this.state.people];
     people.splice(personIndex, 1);
-    this.setState({people: people})
+    this.setState({ people: people });
   }
 
   render() {
     // Inline styles, scoped to the component
-
     const style = {
       backgroundColor: 'green',
       color: 'white',
@@ -104,9 +103,6 @@ class App extends Component {
         </div>
       </StyleRoot>
     );
-
-    // The code above is compiled to this:
-    // return React.createElement('div', {className: "App"}, React.createElement('h1', null, 'React App'));
   }
 }
 
