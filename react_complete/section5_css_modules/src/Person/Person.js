@@ -4,6 +4,11 @@ import styles from './Person.css' // Normal CSS styles
 // When using class-based components, its "this.props" to use it
 const person = (props) => {
   const { name, age, children, click, changed } = props
+  const rnd = Math.random();
+
+  if (rnd < 0.05) {
+    throw new Error( 'Something went wrong!' );
+  }
 
   return (
     <div className={styles.Person}>
