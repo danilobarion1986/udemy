@@ -6,7 +6,7 @@ const person = (props) => {
   const { name, age, children, click, changed } = props
   const rnd = Math.random();
 
-  if (rnd < 0.05) {
+  if (rnd < 0.2) {
     throw new Error( 'Something went wrong!' );
   }
 
